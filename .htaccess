@@ -1,0 +1,13 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve index.html for root (already default, but explicit)
+DirectoryIndex index.html
+
+# Clean URL rewrites — /complete → complete.html, /ultimate → ultimate.html
+# Only rewrite if the request is NOT an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^complete/?$ /complete.html [L]
+RewriteRule ^ultimate/?$ /ultimate.html [L]
