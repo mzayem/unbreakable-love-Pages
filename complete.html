@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Origin – Complete <s>Assessment</s> <span class="discovery-label">Discovery</span> + Free Consultation | Unbreakable Love</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --primary:    #a02021;
+    --primary-dk: #7f191a;
+    --stone-50:   #fafaf9;
+    --stone-100:  #f5f5f4;
+    --stone-200:  #e7e5e4;
+    --stone-300:  #d6d3d1;
+    --stone-400:  #a8a29e;
+    --stone-500:  #78716c;
+    --stone-600:  #57534e;
+    --stone-700:  #44403c;
+    --stone-800:  #292524;
+    --stone-900:  #1c1917;
+    --white:      #ffffff;
+    --r:          8px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Geist', system-ui, sans-serif; background: var(--white); color: var(--stone-800); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px) saturate(150%); border-bottom: 1px solid var(--stone-200); padding: 0 24px; height: 5.5rem; display: flex; align-items: center; justify-content: center; }
+  .nav-inner { width: 100%; max-width: 1280px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo img { height: 36px; display: block; }
+  .nav-logo-text { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--stone-800); }
+  .nav-links { display: flex; align-items: center; gap: 24px; }
+  .nav-links a { font-size: 15px; font-weight: 600; color: var(--stone-500); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-cta { background: var(--primary); color: var(--white) !important; padding: 10px 22px; border-radius: var(--r); font-weight: 600; font-size: 14px; transition: background 0.15s, transform 0.15s !important; }
+  .nav-cta:hover { background: var(--primary-dk) !important; transform: translateY(-1px); }
+
+  /* TOPBAR */
+  .topbar { background: var(--primary); color: var(--white); text-align: center; padding: 12px 24px; font-size: 14px; font-weight: 500; }
+  .topbar strong { font-weight: 700; }
+
+  /* HERO */
+  .hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(160,32,33,0.55) 0%, rgba(127,25,26,0.35) 50%, rgba(160,32,33,0.45) 100%), linear-gradient(180deg, #2a0a0a 0%, #4a1010 100%); }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: url('https://www.unbreakablelove.com/images/backgrounds/hero-couple.png'); background-size: cover; background-position: center; opacity: 0.7; mix-blend-mode: multiply; }
+  .hero-inner { position: relative; z-index: 2; max-width: 1280px; width: 100%; padding: 8rem 24px; }
+  .hero-content { max-width: 720px; }
+  .hero h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 24px; }
+  .hero h1 span { color: #d6d0c8; }
+  .hero-sub { font-size: clamp(17px, 2.2vw, 22px); color: #e8e0d8; line-height: 1.6; margin-bottom: 36px; max-width: 580px; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; margin-bottom: 20px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #e8e2d8; color: var(--primary); font-weight: 700; font-size: 17px; padding: 16px 36px; border-radius: var(--r); text-decoration: none; border: none; cursor: pointer; transition: background 0.15s, transform 0.15s; }
+  .btn-primary:hover { background: var(--white); transform: translateY(-1px); }
+  .btn-outline-white { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 2px solid var(--white); color: var(--white); font-weight: 700; font-size: 17px; padding: 14px 36px; border-radius: var(--r); text-decoration: none; cursor: pointer; transition: background 0.15s, color 0.15s; }
+  .btn-outline-white:hover { background: var(--white); color: var(--primary); }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* INCLUDES CARD in hero */
+  .hero-offer-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    max-width: 500px;
+    backdrop-filter: blur(8px);
+  }
+  .hero-offer-card h4 { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .inc-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 15px; color: rgba(255,255,255,0.9); font-weight: 500; }
+  .inc-item:last-child { border-bottom: none; }
+  .inc-item svg { color: rgba(255,255,255,0.9); flex-shrink: 0; }
+  .price-row-hero { display: flex; align-items: center; gap: 16px; margin: 20px 0 24px; }
+  .price-row-hero .old { font-size: 18px; color: rgba(255,255,255,0.35); text-decoration: line-through; }
+  .price-row-hero .new { font-size: 60px; font-weight: 700; color: var(--white); line-height: 1; }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--white); border-bottom: 1px solid var(--stone-200); padding: 20px 24px; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--stone-600); }
+  .trust-item svg { color: var(--primary); }
+
+  /* SECTIONS */
+  .sec { padding: 80px 24px; }
+  .sec-stone { background: var(--stone-50); }
+  .sec-white { background: var(--white); }
+  .container { max-width: 1180px; margin: 0 auto; }
+  .container-sm { max-width: 780px; margin: 0 auto; }
+  .sec-label { display: inline-block; background: #fef2f2; color: var(--primary); font-size: 13px; font-weight: 600; padding: 4px 14px; border-radius: 100px; margin-bottom: 14px; }
+  .sec-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--stone-800); line-height: 1.15; margin-bottom: 16px; }
+  .body-p { font-size: 17px; line-height: 1.75; color: var(--stone-600); }
+
+  /* MODULES GRID */
+  .modules-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+  .mod-row { display: flex; gap: 20px; align-items: flex-start; background: var(--stone-50); border-radius: 12px; padding: 24px 28px; border: 1px solid var(--stone-200); transition: border-color 0.2s, transform 0.2s; }
+  .mod-row:hover { border-color: var(--stone-300); transform: translateX(4px); }
+  .mod-num { font-size: 36px; font-weight: 700; color: var(--stone-300); line-height: 1; flex-shrink: 0; width: 44px; }
+  .mod-content h4 { font-size: 19px; font-weight: 700; color: var(--stone-800); margin-bottom: 6px; }
+  .mod-content p { font-size: 15px; line-height: 1.65; color: var(--stone-600); }
+
+  /* CONSULTATION */
+  .consult-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 48px; }
+  .consult-card { background: var(--white); border-radius: 16px; padding: 40px; box-shadow: 0 4px 32px rgba(0,0,0,0.1); text-align: center; }
+  .consult-card .big { font-size: 56px; margin-bottom: 16px; }
+  .consult-card h4 { font-size: 22px; font-weight: 700; color: var(--stone-800); margin-bottom: 10px; }
+  .consult-card p { font-size: 15px; color: var(--stone-600); line-height: 1.65; margin-bottom: 20px; }
+  .free-badge { display: inline-block; background: #fef2f2; border: 1px solid rgba(160,32,33,0.2); color: var(--primary); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 7px 18px; border-radius: 100px; }
+  .consult-copy h3 { font-size: 28px; font-weight: 700; color: var(--stone-800); margin-bottom: 14px; }
+  .consult-copy p { font-size: 16px; line-height: 1.75; color: var(--stone-600); margin-bottom: 14px; }
+
+  /* TESTIMONIALS */
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px; }
+  .testi-card { background: var(--stone-50); border-radius: 12px; padding: 32px 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: box-shadow 0.2s; }
+  .testi-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .stars { display: flex; gap: 3px; margin-bottom: 16px; }
+  .stars svg { color: var(--primary); width: 18px; height: 18px; }
+  .testi-card blockquote { font-size: 16px; line-height: 1.65; color: var(--stone-700); font-style: italic; margin-bottom: 16px; }
+  .testi-name { font-weight: 700; font-size: 14px; color: var(--stone-900); }
+  .testi-role { font-size: 13px; color: var(--stone-500); margin-top: 2px; }
+
+  /* STATS */
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; margin-top: 48px; }
+  .stat-num { font-size: 44px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-size: 15px; color: var(--stone-600); }
+
+  /* CTA BOTTOM */
+  .cta-bottom { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dk) 100%); padding: 80px 24px; text-align: center; }
+  .cta-bottom h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .cta-bottom p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 36px; line-height: 1.6; }
+
+  .value-stack { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px; max-width: 460px; margin: 0 auto 32px; }
+  .v-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 15px; color: rgba(255,255,255,0.8); }
+  .v-row:last-child { border-bottom: none; }
+  .v-name { font-weight: 500; }
+  .v-price { color: rgba(255,255,255,0.4); text-decoration: line-through; font-size: 14px; }
+  .v-total { display: flex; justify-content: space-between; align-items: center; padding: 14px 0 0; border-top: 1px solid rgba(255,255,255,0.3); margin-top: 8px; }
+  .v-total-label { font-size: 16px; font-weight: 700; color: var(--white); }
+  .v-total-price { font-size: 42px; font-weight: 700; color: var(--white); line-height: 1; }
+
+  .btn-white-lg { display: inline-block; background: #e8e2d8; color: var(--primary); font-weight: 700; font-size: 18px; padding: 18px 48px; border-radius: var(--r); text-decoration: none; transition: background 0.15s; }
+  .btn-white-lg:hover { background: var(--white); }
+
+  .guarantee { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 18px; }
+
+  /* ASSOC */
+  .assoc-bar { background: var(--white); border-top: 1px solid var(--stone-200); padding: 32px 24px; display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .assoc-bar a { display: flex; align-items: center; justify-content: center; width: 140px; height: 80px; background: var(--white); border-radius: 10px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: box-shadow 0.2s; }
+  .assoc-bar a:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  .assoc-bar img { max-height: 100%; max-width: 100%; object-fit: contain; filter: grayscale(1); transition: filter 0.2s; }
+  .assoc-bar a:hover img { filter: grayscale(0); }
+
+  /* FOOTER */
+  footer { background: var(--stone-900); color: var(--stone-400); padding: 48px 24px 32px; }
+  .footer-inner { max-width: 1180px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .footer-logo { height: 52px; margin-bottom: 16px; }
+  .footer-desc { font-size: 14px; line-height: 1.7; color: var(--stone-400); max-width: 360px; }
+  .footer-col h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 14px; color: var(--stone-400); text-decoration: none; transition: color 0.15s; }
+  .footer-col ul li a:hover { color: var(--stone-200); }
+  .footer-contact { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-contact li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--stone-400); }
+  .footer-contact li svg { flex-shrink: 0; margin-top: 2px; width: 16px; height: 16px; }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+  .footer-bottom a { color: var(--stone-400); text-decoration: none; transition: color 0.15s; }
+  .footer-bottom a:hover { color: var(--stone-200); }
+
+  @media (max-width: 768px) {
+    nav .nav-links { display: none; }
+    .consult-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr; }
+    .hero-inner { padding: 6rem 20px; }
+  }
+
+  /* <s>Assessment</s> <span class="discovery-label">Discovery</span> → Discovery strikethrough style */
+  s {
+    text-decoration: line-through;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    color: inherit;
+  }
+  s + * , s + span, s ~ * { }
+
+
+  /* <s>Assessment</s> <span class="discovery-label">Discovery</span> strikethrough + Discovery label */
+  s {
+    text-decoration: line-through;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 2px;
+    color: inherit;
+    opacity: 0.75;
+  }
+  .discovery-label {
+    color: var(--primary);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="topbar">⭐ Most Popular Offer &nbsp;·&nbsp; Full <s>Assessment</s> <span class="discovery-label">Discovery</span> + <strong>FREE 30-Min Consultation</strong> — Just $97</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://www.unbreakablelove.com" class="nav-logo"><svg viewBox="0 0 2455.1 605.8" style="height:36px;width:auto;display:block;" aria-label="Unbreakable Love"><g><g><path d="M959.9,0v118.4c0,25.3-15.8,51.2-63,51.2s-63-25.8-63-51.2V0h37.6v114.9c0,13.5,6.5,21.3,25.3,21.3s25.3-7.8,25.3-21.3V0h37.6Z" style="fill:#9e8b7e"/><path d="M1027.1,57.2v109.9h-35.9V0h46.2l54.9,115.1V0h35.9v167.1h-46.4l-54.7-109.9Z" style="fill:#9e8b7e"/><path d="M1232.1,167.1h-71.2V0h66c34.9,0,47.7,14,47.7,36.6v17.1c0,12-5.3,20.6-18.6,26.3,13.8,3.3,24.6,15.3,24.6,30.9v16.3c0,23.6-15.1,39.9-48.4,39.9ZM1236.9,42.1c0-7.3-4.5-11.8-15-11.8h-23.3v38.1h23.3c10,0,15-5,15-11.8v-14.5ZM1242.9,111.9c0-9.3-5.8-14-15.8-14h-28.6v38.9h23.3c11.8,0,21.1-2.5,21.1-14.6v-10.3Z" style="fill:#9e8b7e"/><path d="M1364.1,115.1h-22.1v51.9h-37.6V0h69.5c40.6,0,55.7,16.1,55.7,47.4v20.6c0,20.8-7.5,34.9-24.3,41.9l40.4,57.2h-44.7l-36.9-51.9ZM1391.9,50.9c0-12.5-4.8-17.6-20.1-17.6h-29.9v49.2h29.9c16.1,0,20.1-5.8,20.1-18.3v-13.3Z" style="fill:#9e8b7e"/><path d="M1465.7,167.1V0h105.1v33.4h-67.5v30.6h62.2v33.4h-62.2v36.4h67.5v33.4h-105.1Z" style="fill:#9e8b7e"/><path d="M1741.9,167.1h-39.1l-9-32.6h-55.9l-9,32.6h-39.1L1640.5,0h50.2l51.2,167.1ZM1646.3,103.1h38.4l-19.1-70-19.3,70Z" style="fill:#9e8b7e"/><path d="M1760.7,0h37.6v167.1h-37.6V0ZM1803.1,81.8L1848.2,0h42.4l-46.9,81.8,50.4,85.3h-42.4l-48.7-85.3Z" style="fill:#9e8b7e"/><path d="M2060.2,167.1h-39.1l-9-32.6h-55.9l-9,32.6h-39.1L1958.9,0h50.2l51.2,167.1ZM1964.7,103.1h38.4l-19.1-70-19.3,70Z" style="fill:#9e8b7e"/><path d="M2150.3,167.1h-71.2V0h66c34.9,0,47.7,14,47.7,36.6v17.1c0,12-5.3,20.6-18.6,26.3,13.8,3.3,24.6,15.3,24.6,30.9v16.3c0,23.6-15.1,39.9-48.4,39.9ZM2155.1,42.1c0-7.3-4.5-11.8-15.1-11.8h-23.3v38.1h23.3c10,0,15.1-5,15.1-11.8v-14.5ZM2161.1,111.9c0-9.3-5.8-14-15.8-14h-28.6v38.9h23.3c11.8,0,21.1-2.5,21.1-14.6v-10.3Z" style="fill:#9e8b7e"/><path d="M2222.6,167.1V0h37.6v133.7h66.2v33.4h-103.9Z" style="fill:#9e8b7e"/><path d="M2347.7,167.1V0h105.1v33.4h-67.5v30.6h62.2v33.4h-62.2v36.4h67.5v33.4h-105.1Z" style="fill:#9e8b7e"/></g><g><path d="M838.2,599.8V201.8h89.6v318.5h157.8v79.5h-247.4Z" style="fill:#a02021"/><path d="M1549.3,483.9c0,60.4-41.8,121.9-154.2,121.9s-154.2-61.5-154.2-121.9v-166.1c0-60.4,41.8-121.9,154.2-121.9s154.2,61.5,154.2,121.9v166.1ZM1459.6,325.5c0-31.1-19.7-50.2-64.5-50.2s-64.5,19.1-64.5,50.2v150.6c0,31.1,19.7,50.2,64.5,50.2s64.5-19.1,64.5-50.2v-150.6Z" style="fill:#a02021"/><path d="M1934.1,599.8h-127.9l-112.3-398h92l84.3,316.7,84.3-316.7h92l-112.3,398Z" style="fill:#a02021"/><path d="M2204.8,599.8V201.8h250.4v79.5h-160.7v72.9h148.2v79.5h-148.2v86.6h160.7v79.5h-250.4Z" style="fill:#a02021"/></g></g><g><path d="M506.3,68.4c-22.9-21.2-50.9-38-79.1-51.2-6.2-2.9-15.2-6.7-23.9-9.6C431.9,1,462.9-.8,491.6.3c212.2,7.8,352.3,222.8,266.9,419.8-62.5,144.2-232,227.5-381.5,162-67-29.4-118.9-83.9-167.3-137l.6-1.9c36.2,27,77.7,46.9,121.3,59-2.6,3.9-.7,1.9,1.8,2.7,37.2,12,66.2,26.8,106.7,30.7,159.2,15.2,296.1-117.1,267.3-278.8-17.6-98.7-100.6-178.7-201.2-188.4Z" style="fill:#a02021"/><path d="M506.3,68.4c100.6,9.8,183.6,89.7,201.2,188.4,28.8,161.7-108,294-267.3,278.8-40.5-3.9-69.6-18.7-106.7-30.7-2.5-.8-4.3,1.2-1.8-2.7,98.5,27.4,206.2,6.3,275.4-71.9,76.3-86.2,68.8-213.8-21.9-286.3-10-8-36.1-24.9-36.1-24.9,0,0-26-35.4-42.8-50.9Z" style="fill:#7f191a"/><path d="M286.8,540.8c20.9,16.8,43.9,30.6,67.2,43.9l22.7,11.3c-13.1,2.4-26,5.8-39.3,7.5-144.7,18.4-282.3-78.9-324-216.1C-54,165.8,143.8-45.5,369,8.7c104.9,25.3,177.3,102,204,202.8,13.3,50.1,4.9,118.3-29.7,147.6,8.7-17.8,15.1-110.3-63.9-189.2-30.2-30.2-46.8-53.8-86.8-73C214.1,11.2,26.5,183.3,84.4,369.1c28.5,91.5,110.1,153.7,202.5,171.7Z" style="fill:#9e8b7e"/><path d="M392.5,96.8C214.1,11.2,26.5,183.3,84.4,369.1c28.5,91.5,110.1,153.7,202.5,171.7-24.8-20-51.3-46.6-73.2-69.9-40.1-42.5-77.3-86.3-83.4-147-2.7-26.8-.2-41.1,5.1-66.8,0-.4,0-.9,0-1.3,5-14.6,10.3-30.1,18-43.6,14.5-25.5,39.6-50.4,64.3-66,4.4-2.8,29.1-14.5,29.4-16.2,12.9-4.3,25.1-8.7,38.5-11.6,5.4-1.1,10-1.8,15.4-2.6,38.5-5.2,69-1.7,105.3,11.6,14,5.1,25.9,10.8,38.9,18.2,21.5,12.3,34.3,24.1,34.3,24.1-28.2-32.2-46.8-53.8-86.8-73Z" style="fill:#a02021"/><path d="M404.7,184.8v182.4c0,39-24.3,78.8-97,78.8s-97-39.8-97-78.8v-182.4h58v177c0,20.9,10,32.8,39,32.8s39-12,39-32.8v-177h58Z" style="fill:#9e8b7e"/><path d="M404.7,442.2V184.8h58v206h102v51.4h-160Z" style="fill:#a02021"/></g></svg></a>
+    <div class="nav-links">
+      <a href="https://www.unbreakablelove.com/about">About</a>
+      <a href="https://www.unbreakablelove.com/coaching">Coaching</a>
+      <a href="https://www.unbreakablelove.com/deeporigin">Deep Origin</a>
+      <a href="https://www.unbreakablelove.com/connect">Connect</a>
+      <a href="#get-started" class="nav-cta">Get Full Access — $97</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">⭐ Most Popular Choice</div>
+      <h1>The Complete <span>Deep Origin</span> Experience</h1>
+      <p class="hero-sub">Every module. Every insight. Plus a live 30-minute session with a certified relationship counselor — one flat price.</p>
+
+      <div class="hero-offer-card">
+        <h4>Everything Included</h4>
+        <div class="inc-item">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Full Deep Origin <s>Assessment</s> <span class="discovery-label">Discovery</span> — All 5 Modules
+        </div>
+        <div class="inc-item">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          FREE 30-Min Online Consultation
+        </div>
+        <div class="inc-item">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Personalized Results Report
+        </div>
+        <div class="price-row-hero">
+          <span class="old">$247</span>
+          <span class="new">$97</span>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#get-started" class="btn-primary">Get Everything for $97 →</a>
+        <a href="https://www.unbreakablelove.com/coaching" class="btn-outline-white">Speak with a Coach</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Secure & Private</div>
+  <div class="trust-item"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Instant Access</div>
+  <div class="trust-item"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg> Award-Winning Coaching</div>
+  <div class="trust-item"><svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> 30-Day Guarantee</div>
+</div>
+
+<!-- MODULES -->
+<section class="sec sec-stone">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:12px;"><span class="sec-label">What's Inside</span></div>
+    <h2 class="sec-title" style="text-align:center;">Every Module. Every Insight.</h2>
+    <p class="body-p" style="text-align:center; max-width:640px; margin:0 auto;">A structured journey through the layers of your inner world — from early emotional imprints to how you show up in love today.</p>
+    <div class="modules-grid">
+      <div class="mod-row"><div class="mod-num">01</div><div class="mod-content"><h4>Your Origin Blueprint</h4><p>Trace the emotional patterns and attachment style formed from birth that shape every relationship you enter.</p></div></div>
+      <div class="mod-row"><div class="mod-num">02</div><div class="mod-content"><h4>Love Language Profile</h4><p>Discover exactly how you give and receive love — and why past partners may have missed the mark.</p></div></div>
+      <div class="mod-row"><div class="mod-num">03</div><div class="mod-content"><h4>Communication Archetype</h4><p>Understand your default communication style and learn what truly helps you feel heard and understood.</p></div></div>
+      <div class="mod-row"><div class="mod-num">04</div><div class="mod-content"><h4>Subconscious Blocks</h4><p>Surface the hidden fears, beliefs, and stories that quietly sabotage intimacy and genuine connection.</p></div></div>
+      <div class="mod-row"><div class="mod-num">05</div><div class="mod-content"><h4>Your Relationship Destiny</h4><p>Synthesize everything into a clear, empowering picture of who you are and who you were designed to love.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="sec sec-white">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:12px;"><span class="sec-label">Included Free</span></div>
+    <h2 class="sec-title" style="text-align:center;">Your Personal Counselor Session</h2>
+    <div class="consult-grid">
+      <div class="consult-card">
+        <div class="big">🎙️</div>
+        <h4>30-Min Online Session</h4>
+        <p>A real, human conversation with a certified counselor who has reviewed your results in advance — personalized entirely to you.</p>
+        <span class="free-badge">✦ Included Free ✦</span>
+      </div>
+      <div class="consult-copy">
+        <h3>30 Minutes That Could Change Everything</h3>
+        <p>After completing the <s>assessment</s> <span class="discovery-label">discovery</span>, you'll book your free 30-minute video session. Your counselor walks through your personalized results, answers your questions, and helps you take meaningful next steps.</p>
+        <p>This session alone is normally valued at over $120 — included free with this offer.</p>
+        <p style="font-size:14px; color:var(--stone-500);">✓ Certified relationship counselor &nbsp;·&nbsp; ✓ Reviewed your results in advance &nbsp;·&nbsp; ✓ Scheduled at your convenience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec sec-stone">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:12px;"><span class="sec-label">Success Stories</span></div>
+    <h2 class="sec-title" style="text-align:center;">Real Transformations</h2>
+    <p class="body-p" style="text-align:center; max-width:600px; margin: 0 auto;">Real people who invested in their relationships and personal growth</p>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="stars"><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></div><blockquote>"We were on the brink of divorce when we found Unbreakable Love. The coaching transformed not just our marriage, but our entire outlook on life."</blockquote><div class="testi-name">Sarah & Michael Thompson</div><div class="testi-role">Married 12 years</div></div>
+      <div class="testi-card"><div class="stars"><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></div><blockquote>"The coaching sessions provided practical tools we use every single day. Our communication has improved dramatically, and we finally feel like we're on the same team."</blockquote><div class="testi-name">David & Lisa Chen</div><div class="testi-role">Married 8 years</div></div>
+      <div class="testi-card"><div class="stars"><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></div><blockquote>"After taking the Deep Origin assessment, I finally understood why I struggled in certain areas and excelled in others. Transformative for both my personal and professional life."</blockquote><div class="testi-name">Robert Johnson</div><div class="testi-role">Individual Coaching</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sec sec-white" style="padding-top:0; padding-bottom:80px;">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-num">2,000+</div><div class="stat-label">Couples Helped</div></div>
+      <div><div class="stat-num">95%</div><div class="stat-label">Success Rate</div></div>
+      <div><div class="stat-num">5,000+</div><div class="stat-label"><s>Assessments</s> <span class="discovery-label">Discoveries</span> Taken</div></div>
+      <div><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BOTTOM -->
+<section class="cta-bottom" id="get-started">
+  <div class="container-sm">
+    <h2>Everything You Need to Understand Yourself</h2>
+    <p>The full <s>assessment</s> <span class="discovery-label">discovery</span>. The consultation. The personalized report. All for $97.</p>
+    <div class="value-stack">
+      <div class="v-row"><span class="v-name">Full Deep Origin <s>Assessment</s> <span class="discovery-label">Discovery</span> (5 Modules)</span><span class="v-price">$120</span></div>
+      <div class="v-row"><span class="v-name">FREE 30-Min Counselor Consultation</span><span class="v-price">$120</span></div>
+      <div class="v-row"><span class="v-name">Personalized Results Report</span><span class="v-price">$27</span></div>
+      <div class="v-total"><span class="v-total-label">Your Price Today</span><span class="v-total-price">$97</span></div>
+    </div>
+    <a href="https://buy.stripe.com/cNicN60dq3INerj2v0fnO01" class="btn-white-lg">Get Full Access Now →</a>
+    <div class="guarantee">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+      30-Day Money-Back Guarantee &nbsp;·&nbsp; Secure Checkout &nbsp;·&nbsp; No Subscription
+    </div>
+  </div>
+</section>
+
+<div class="assoc-bar">
+  <a href="https://aacc.net" target="_blank" rel="noopener"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <rect width="200" height="100" fill="white"/>
+  <text x="100" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#2d2d2d">AACC</text>
+  <line x1="30" y1="36" x2="170" y2="36" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" fill="#555" letter-spacing="0.5">American Association of</text>
+  <text x="100" y="63" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" fill="#555" letter-spacing="0.5">Christian Counselors</text>
+  <text x="100" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#999" letter-spacing="1">aacc.net</text>
+</svg></a>
+  <a href="https://www.lovefactor.com" target="_blank" rel="noopener"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <rect width="200" height="100" fill="white"/>
+  <text x="100" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#a02021" letter-spacing="1">LOVE FACTOR</text>
+  <line x1="40" y1="38" x2="160" y2="38" stroke="#e0c0c0" stroke-width="1"/>
+  <text x="100" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#666" letter-spacing="0.5">Relationship Intelligence</text>
+  <text x="100" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#666" letter-spacing="0.5">&amp; Coaching Platform</text>
+  <text x="100" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#999" letter-spacing="1">lovefactor.com</text>
+</svg></a>
+  <a href="https://coachingfederation.org" target="_blank" rel="noopener"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <rect width="200" height="100" fill="white"/>
+  <text x="100" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#1a3a5c">ICF</text>
+  <line x1="40" y1="37" x2="160" y2="37" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="52" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555" letter-spacing="0.3">International Coach</text>
+  <text x="100" y="63" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" fill="#555" letter-spacing="0.3">Federation</text>
+  <text x="100" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#999" letter-spacing="1">coachingfederation.org</text>
+</svg></a>
+  <a href="https://christiancoachingtoday.com" target="_blank" rel="noopener"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <rect width="200" height="100" fill="white"/>
+  <text x="100" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#2d5a27">ICCA</text>
+  <line x1="40" y1="37" x2="160" y2="37" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="52" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#555" letter-spacing="0.3">International Coaching</text>
+  <text x="100" y="63" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#555" letter-spacing="0.3">Certification Association</text>
+  <text x="100" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" fill="#999" letter-spacing="0.8">christiancoachingtoday.com</text>
+</svg></a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <svg viewBox="0 0 2455.1 605.8" style="height:52px;width:auto;display:block;" aria-label="Unbreakable Love"><g><g><path d="M959.9,0v118.4c0,25.3-15.8,51.2-63,51.2s-63-25.8-63-51.2V0h37.6v114.9c0,13.5,6.5,21.3,25.3,21.3s25.3-7.8,25.3-21.3V0h37.6Z" style="fill:#d4cec7"/><path d="M1027.1,57.2v109.9h-35.9V0h46.2l54.9,115.1V0h35.9v167.1h-46.4l-54.7-109.9Z" style="fill:#d4cec7"/><path d="M1232.1,167.1h-71.2V0h66c34.9,0,47.7,14,47.7,36.6v17.1c0,12-5.3,20.6-18.6,26.3,13.8,3.3,24.6,15.3,24.6,30.9v16.3c0,23.6-15.1,39.9-48.4,39.9ZM1236.9,42.1c0-7.3-4.5-11.8-15-11.8h-23.3v38.1h23.3c10,0,15-5,15-11.8v-14.5ZM1242.9,111.9c0-9.3-5.8-14-15.8-14h-28.6v38.9h23.3c11.8,0,21.1-2.5,21.1-14.6v-10.3Z" style="fill:#d4cec7"/><path d="M1364.1,115.1h-22.1v51.9h-37.6V0h69.5c40.6,0,55.7,16.1,55.7,47.4v20.6c0,20.8-7.5,34.9-24.3,41.9l40.4,57.2h-44.7l-36.9-51.9ZM1391.9,50.9c0-12.5-4.8-17.6-20.1-17.6h-29.9v49.2h29.9c16.1,0,20.1-5.8,20.1-18.3v-13.3Z" style="fill:#d4cec7"/><path d="M1465.7,167.1V0h105.1v33.4h-67.5v30.6h62.2v33.4h-62.2v36.4h67.5v33.4h-105.1Z" style="fill:#d4cec7"/><path d="M1741.9,167.1h-39.1l-9-32.6h-55.9l-9,32.6h-39.1L1640.5,0h50.2l51.2,167.1ZM1646.3,103.1h38.4l-19.1-70-19.3,70Z" style="fill:#d4cec7"/><path d="M1760.7,0h37.6v167.1h-37.6V0ZM1803.1,81.8L1848.2,0h42.4l-46.9,81.8,50.4,85.3h-42.4l-48.7-85.3Z" style="fill:#d4cec7"/><path d="M2060.2,167.1h-39.1l-9-32.6h-55.9l-9,32.6h-39.1L1958.9,0h50.2l51.2,167.1ZM1964.7,103.1h38.4l-19.1-70-19.3,70Z" style="fill:#d4cec7"/><path d="M2150.3,167.1h-71.2V0h66c34.9,0,47.7,14,47.7,36.6v17.1c0,12-5.3,20.6-18.6,26.3,13.8,3.3,24.6,15.3,24.6,30.9v16.3c0,23.6-15.1,39.9-48.4,39.9ZM2155.1,42.1c0-7.3-4.5-11.8-15.1-11.8h-23.3v38.1h23.3c10,0,15.1-5,15.1-11.8v-14.5ZM2161.1,111.9c0-9.3-5.8-14-15.8-14h-28.6v38.9h23.3c11.8,0,21.1-2.5,21.1-14.6v-10.3Z" style="fill:#d4cec7"/><path d="M2222.6,167.1V0h37.6v133.7h66.2v33.4h-103.9Z" style="fill:#d4cec7"/><path d="M2347.7,167.1V0h105.1v33.4h-67.5v30.6h62.2v33.4h-62.2v36.4h67.5v33.4h-105.1Z" style="fill:#d4cec7"/></g><g><path d="M838.2,599.8V201.8h89.6v318.5h157.8v79.5h-247.4Z" style="fill:#c55b5b"/><path d="M1549.3,483.9c0,60.4-41.8,121.9-154.2,121.9s-154.2-61.5-154.2-121.9v-166.1c0-60.4,41.8-121.9,154.2-121.9s154.2,61.5,154.2,121.9v166.1ZM1459.6,325.5c0-31.1-19.7-50.2-64.5-50.2s-64.5,19.1-64.5,50.2v150.6c0,31.1,19.7,50.2,64.5,50.2s64.5-19.1,64.5-50.2v-150.6Z" style="fill:#c55b5b"/><path d="M1934.1,599.8h-127.9l-112.3-398h92l84.3,316.7,84.3-316.7h92l-112.3,398Z" style="fill:#c55b5b"/><path d="M2204.8,599.8V201.8h250.4v79.5h-160.7v72.9h148.2v79.5h-148.2v86.6h160.7v79.5h-250.4Z" style="fill:#c55b5b"/></g></g><g><path d="M506.3,68.4c-22.9-21.2-50.9-38-79.1-51.2-6.2-2.9-15.2-6.7-23.9-9.6C431.9,1,462.9-.8,491.6.3c212.2,7.8,352.3,222.8,266.9,419.8-62.5,144.2-232,227.5-381.5,162-67-29.4-118.9-83.9-167.3-137l.6-1.9c36.2,27,77.7,46.9,121.3,59-2.6,3.9-.7,1.9,1.8,2.7,37.2,12,66.2,26.8,106.7,30.7,159.2,15.2,296.1-117.1,267.3-278.8-17.6-98.7-100.6-178.7-201.2-188.4Z" style="fill:#c55b5b"/><path d="M506.3,68.4c100.6,9.8,183.6,89.7,201.2,188.4,28.8,161.7-108,294-267.3,278.8-40.5-3.9-69.6-18.7-106.7-30.7-2.5-.8-4.3,1.2-1.8-2.7,98.5,27.4,206.2,6.3,275.4-71.9,76.3-86.2,68.8-213.8-21.9-286.3-10-8-36.1-24.9-36.1-24.9,0,0-26-35.4-42.8-50.9Z" style="fill:#a83333"/><path d="M286.8,540.8c20.9,16.8,43.9,30.6,67.2,43.9l22.7,11.3c-13.1,2.4-26,5.8-39.3,7.5-144.7,18.4-282.3-78.9-324-216.1C-54,165.8,143.8-45.5,369,8.7c104.9,25.3,177.3,102,204,202.8,13.3,50.1,4.9,118.3-29.7,147.6,8.7-17.8,15.1-110.3-63.9-189.2-30.2-30.2-46.8-53.8-86.8-73C214.1,11.2,26.5,183.3,84.4,369.1c28.5,91.5,110.1,153.7,202.5,171.7Z" style="fill:#d4cec7"/><path d="M392.5,96.8C214.1,11.2,26.5,183.3,84.4,369.1c28.5,91.5,110.1,153.7,202.5,171.7-24.8-20-51.3-46.6-73.2-69.9-40.1-42.5-77.3-86.3-83.4-147-2.7-26.8-.2-41.1,5.1-66.8,0-.4,0-.9,0-1.3,5-14.6,10.3-30.1,18-43.6,14.5-25.5,39.6-50.4,64.3-66,4.4-2.8,29.1-14.5,29.4-16.2,12.9-4.3,25.1-8.7,38.5-11.6,5.4-1.1,10-1.8,15.4-2.6,38.5-5.2,69-1.7,105.3,11.6,14,5.1,25.9,10.8,38.9,18.2,21.5,12.3,34.3,24.1,34.3,24.1-28.2-32.2-46.8-53.8-86.8-73Z" style="fill:#c55b5b"/><path d="M404.7,184.8v182.4c0,39-24.3,78.8-97,78.8s-97-39.8-97-78.8v-182.4h58v177c0,20.9,10,32.8,39,32.8s39-12,39-32.8v-177h58Z" style="fill:#d4cec7"/><path d="M404.7,442.2V184.8h58v206h102v51.4h-160Z" style="fill:#c55b5b"/></g></svg>
+        <p class="footer-desc">We walk with individuals, couples, and families to strengthen connection and awaken purpose through our proven coaching and the groundbreaking Deep Origin discovery.</p>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://www.unbreakablelove.com/coaching">Coaching</a></li><li><a href="https://www.unbreakablelove.com/deeporigin">Deep Origin</a></li><li><a href="https://www.unbreakablelove.com/about">About</a></li><li><a href="https://www.unbreakablelove.com/resources">Resources</a></li><li><a href="https://www.unbreakablelove.com/facilitators">Facilitators</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul class="footer-contact"><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ffcf0f1f1fafcebdfeaf1fdedfafef4fefdf3faf3f0e9fab1fcf0f2">[email&#160;protected]</a></li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(208) 425-6222</li><li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Coeur d'Alene, Idaho 83815</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Unbreakable Love. All rights reserved.</p><div style="display:flex; gap:24px;"><a href="https://www.unbreakablelove.com/privacy-policy">Privacy Policy<
