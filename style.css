@@ -1193,7 +1193,7 @@ s {
   opacity: 0.75;
 }
 .discovery-label {
-  color: var(--primary);
+  color: var(--stone-50);
   font-style: italic;
   font-weight: 600;
 }
